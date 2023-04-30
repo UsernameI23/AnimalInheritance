@@ -1,4 +1,4 @@
-﻿// base Class 
+// base Class 
 class Animal
 {
     private string name; // only accessible within this class
@@ -26,7 +26,7 @@ class Cat : Animal
 {
     public string breed;  // accessible from any class
     protected int height;  //accessible from derived classes
-    private int weight;
+    protected int weight;
 
     public void setHeight(int height)
     {
@@ -42,7 +42,7 @@ class Cat : Animal
     }
     public virtual int getWeight()
     {
-        return this.weight;
+        return weight;
     }
 
     // access name through base because it is private
@@ -93,9 +93,10 @@ class Program
         Console.WriteLine($"Color= {kitty.color}");
         Console.WriteLine($"Breed= {kitty.breed}");
         Console.WriteLine($"Height= {kitty.getHeight()} inches");
-        Console.WriteLine($"Weight= {kitty.getWeight} Ibs");
+        Console.WriteLine($"Weight= {kitty.getWeight()} Ibs");
 
         Console.ReadLine(); // pauses end of program display
     }
 
 }
+
